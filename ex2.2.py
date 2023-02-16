@@ -50,7 +50,7 @@ y_data = []  # Execution time
 # Measure execution time for each subarray
 for i in range(len(data)):
 
-    secs = timeit.timeit(globals=globals(), stmt="func1(data, 0, len(data)-1)", number=100)
+    secs = timeit.timeit(globals=globals(), stmt="func1(data[i], 0, len(data[i])-1)", number=100)
     x_data.append(len(data[i]))
     y_data.append(secs)
     
